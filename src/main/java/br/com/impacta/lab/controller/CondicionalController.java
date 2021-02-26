@@ -24,9 +24,18 @@ public class CondicionalController {
 		 *  Para menores de dezoito anos -> Possui menos de 18 anos
 		 *  
 		 */
+      String valor = null;
+
+     if (idade>=18) {
+       valor = "Possui mais de 18 anos";
+       System.out.println ("Possui mais de 18 anos");
+     } else {
+       valor = "Possui menos de 18 anos";
+       System.out.println ("Possui menos de 18 anos");
+     }
 		
 		
-		return ResponseEntity.ok("APÓS O ALGORITMO COLOCAR O TEXTO/VARIAVEL DE RETORNO AQUI");
+		return ResponseEntity.ok(valor);
 	}
 	
 }
